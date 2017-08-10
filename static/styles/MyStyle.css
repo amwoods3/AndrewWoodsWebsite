@@ -1,4 +1,15 @@
 h1 {
-	background: #ff0000;
+	background: #009900;
+	color: #ffffff;
+	border-radius: 5px;
+}
+
+h2 {
+	background: #009900;
+	color: #ffffff;
+}
+
+h3 {
+	background: #009900;
 	color: #ffffff;
 }
