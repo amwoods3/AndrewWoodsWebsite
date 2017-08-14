@@ -1,0 +1,42 @@
+[{
+	"project": {
+	"English": "Financial Managing Application",
+	"Japanese": "自分のお金を扱うアプリ"
+	},
+	"description": {
+	"English": ["I am interested in finances and I am trying to create an application in ",	
+	"which I can use that will allow me to keep track of my spending and finances. I have ",
+	"no intention of selling it, but if you are interested, feel free to check it out on Github."],
+	"Japanese": ["自分のお金が大事だから、ちゃんと扱わなければいけません。それで、僕は自分のお金を扱う",
+	"ためのアプリを作っています。これは興味があれば、ぜひごらんください。"]
+	},
+	"github": {
+	"link": "https://github.com/amwoods3/Finance",
+	"English": "Here is a link to Finance below",
+	"Japanese": "下のリンクをごらんください",
+	"name": "Finance"
+	},
+	"programming": {
+		"languages": "C++",
+		"tools": "git versioning, g++ compiler"
+	}
+},
+
+{
+	"project": {
+	"English": "This website",
+	"Japanese": "このサイト"
+	},
+	"description": {
+	"English": ["This website is a project that I am working on, so that I can do many",
+	"things that I am interested in. I want to introduce the projects that I am working",
+	"describe hobbies that I have, and write a blog."],
+	"Japanese": ["このサイトを作っていることはプロジェクトになっています。僕のプロジェクトを紹介し、",
+	"興味になっていることなどについてブログを書きたいと思います。"]
+	},
+	"programming": {
+		"languages": "python, html, javascript, css",
+		"tools": "flask, git versioning"
+	}
+}
+]

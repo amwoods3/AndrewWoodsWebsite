@@ -8,51 +8,51 @@
 </head>
 
 <body>
-	<h1> Description </h1>
-	This is my website that I decided to make. I am doing a lot of different projects, 
+  <h1> Description </h1>
+  {% if language == "English" %}
+  This is my website that I decided to make. I am doing a few different
+  projects.
 	but the idea behind this one is to have something that I can keep track of the 
-	different things I am doing.
-	
-	<p>
-	  I am working on a few different projects. All of which require different skill sets.
-	  I want to build a diverse skill set, as I am in the hopes of finding a job, and 
-	  having more skills means I am more marketable, right? Maybe.
-	</p>
+  different things I am doing.
+  
+  I am working on a few different projects. All of which require different skill sets.
+  I want to build a diverse skill set, as I am in the hopes of finding a job, and 
+  having more skills means I am more marketable, right? Maybe.
+  {% elif language == "Japanese" %}
+  このサイトを作ろうと思っています。様々なプロジェクトを活動しています。このサイトでは
+  そのプロジェクトを紹介したいと思うので、ごらんください。
+  僕のプロジェクトで色々ないい技術を習いたいと思っています。それで、就職できるようになると思います。
+  {% endif %}
 	
 	<h1> Projects </h1>
+        
+        {% for project in project_list %}
+        <h2> {{ project["project"][language] }} </h2>
+        <h3> Description </h3>
+        {{ ' '.join(project["description"][language])}}
+        {% if 'github' in project %}
+        <h3> Github </h3>
+        {{project['github'][language]}}
+        <br>
+        <a href="{{ project['github']['link'] }}"> {{project['github']['name']}}</a>
+        {% endif %}
+        <h3> Other Details </h3>
+        {% if language == 'English' %}
+        Language:
+        {% elif language == 'Japanese' %}
+        言語：
+        {% endif %}
+        {{ project['programming']['languages'] }}
+        <br>
+        {% if language == 'English' %}
+        Tools:
+        {% elif language == 'Japanese' %}
+        ツール：
+        {% endif %}
+        {{ project['programming']['tools'] }}
+        {% endfor %}
 	
-	<h2> Financial Managing Application </h2>
 	
-	<h3> Description </h3>
-	I am interested in finances and I am trying to create an application in which I can use
-	that will allow me to keep track of my spending and things like that. I have no
-	intention of selling it, but if you are interested feel free to check it out on Github.
-	
-	<h3> Github </h3>
-	
-	Here is the main page for <a href="https://github.com/amwoods3/Finance"> Finance</a>.
-	
-	<h3> Details </h3>
-	<div>
-	  <li> Language: C++ </li>
-	</div>
-	
-	<h2> 3D Game </h2>
-	
-	<h3> Description </h3>
-	I started this application in school during my Computer Graphics course. I am interested
-	in developing the game further and making it more interesting. Currently, you can
-	run around in a maze. It works on Mac, as long as you can compile it (there are some 
-	dependencies).
-	
-	<h3> Github </h3>
-	There is no link to github yet.
-	
-	<h3> Details </h3>
-	<div>
-		<li> Language: C++ </li>
-		<li> Tools: OpenGl2 </li>
-	</div>
 	
 	
 </body>
