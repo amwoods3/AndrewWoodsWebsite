@@ -1,0 +1,17 @@
+<!Doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/MyStyle.css') }}'">
+    <title>{% block title %}{% endblock %}-Jubilance</title>
+  </head>
+
+  <body>
+    <ul class="Nav">
+      <li><a href="index">Home</a></li>
+      <li><a href="deviance">Deviance</a></li>
+    </ul>
+    {%block content %}{% endblock %}
+  </body>
+</html>

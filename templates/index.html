@@ -1,13 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/MyStyle.css') }}">
-    <title>Andrew Woods Homepage</title>
-</head>
-
-<body>
+{% extends "banner.html" %}
+{% block title %} Home Page {% endblock %}
+  {% block content %}
   <h1> Description </h1>
   {% if language == "English" %}
   This is my website that I decided to make. I am doing a few different
@@ -54,5 +48,4 @@
 	
 	
 	
-	
-</body>
+{% endblock %}
