@@ -2,24 +2,17 @@ ul.navigationBar {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 25%;
-  position: fixed;
-  background: #082150;
 }
 
 li a {
   display: block;
-  background: #082150;
-  text-align: center;
-  text: center;
-  color: #bbbbbb;
-  height: 32px;
-  width: 100%;
+  background: #154399;
+  color: black;
+  width: 40px;
 }
 
 li a:hover {
-  background: #1642A0;
+  background: #555555;
   color: white;
 }
 
