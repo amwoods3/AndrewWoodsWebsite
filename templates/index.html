@@ -1,51 +1,8 @@
 <!DOCTYPE html>
 {% extends "banner.html" %}
-{% block title %} Home Page {% endblock %}
-  {% block content %}
-  <h1> Description </h1>
-  {% if language == "English" %}
-  This is my website that I decided to make. I am doing a few different
-  projects.
-	but the idea behind this one is to have something that I can keep track of the 
-  different things I am doing.
-  
-  I am working on a few different projects. All of which require different skill sets.
-  I want to build a diverse skill set, as I am in the hopes of finding a job, and 
-  having more skills means I am more marketable, right? Maybe.
-  {% elif language == "Japanese" %}
-  このサイトを作ろうと思っています。様々なプロジェクトを活動しています。このサイトでは
-  そのプロジェクトを紹介したいと思うので、ごらんください。
-  僕のプロジェクトで色々ないい技術を習いたいと思っています。それで、就職できるようになると思います。
-  {% endif %}
-	
-	<h1> Projects </h1>
-        
-        {% for project in project_list %}
-        <h2> {{ project["project"][language] }} </h2>
-        <h3> Description </h3>
-        {{ ' '.join(project["description"][language])}}
-        {% if 'github' in project %}
-        <h3> Github </h3>
-        {{project['github'][language]}}
-        <br>
-        <a href="{{ project['github']['link'] }}"> {{project['github']['name']}}</a>
-        {% endif %}
-        <h3> Other Details </h3>
-        {% if language == 'English' %}
-        Language:
-        {% elif language == 'Japanese' %}
-        言語：
-        {% endif %}
-        {{ project['programming']['languages'] }}
-        <br>
-        {% if language == 'English' %}
-        Tools:
-        {% elif language == 'Japanese' %}
-        ツール：
-        {% endif %}
-        {{ project['programming']['tools'] }}
-        {% endfor %}
-	
-	
-	
+{% block title %} Index Page {% endblock %}
+
+{% block content %}
+Welcome to our website, one that is full of jubilance. You can do whatever you
+want.
 {% endblock %}
